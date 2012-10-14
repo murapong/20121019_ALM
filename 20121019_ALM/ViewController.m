@@ -8,6 +8,9 @@
 
 #import "ViewController.h"
 
+// ヘッダファイルをインポート
+#import <Social/Social.h>
+
 @interface ViewController ()
 
 @end
@@ -24,6 +27,41 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - IBAction
+
+- (IBAction)SLComposeViewControllerButtonPressed:(id)sender
+{
+    NSString *serviceType = SLServiceTypeTwitter;   // Twitter
+//    NSString *serviceType = SLServiceTypeFacebook;  // Facebook
+    
+    // 利用可能かチェック
+    if ([SLComposeViewController isAvailableForServiceType:serviceType]) {
+        SLComposeViewController *composeViewController = [SLComposeViewController
+                                                          composeViewControllerForServiceType:serviceType];
+        
+        // テキストの初期値
+        [composeViewController setInitialText:@"hogehoge"];
+        
+        // 画像を添付
+        [composeViewController addImage:[UIImage imageNamed:@"murapong.jpg"]];
+        
+        // URLを追加
+        [composeViewController addURL:[NSURL URLWithString:@"http://example.com"]];
+        
+        // 完了時の処理
+        [composeViewController setCompletionHandler:^(SLComposeViewControllerResult result) {
+            if (result == SLComposeViewControllerResultDone) {
+                NSLog(@"Done");
+            } else if (result == SLComposeViewControllerResultCancelled) {
+                NSLog(@"Cancelled");
+            }
+        }];
+        
+        // SLComposeViewControllerを表示
+        [self presentViewController:composeViewController animated:YES completion:nil];
+    }
 }
 
 @end

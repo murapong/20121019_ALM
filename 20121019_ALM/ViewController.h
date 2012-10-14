@@ -10,4 +10,6 @@
 
 @interface ViewController : UIViewController
 
+- (IBAction)SLComposeViewControllerButtonPressed:(id)sender;
+
 @end
