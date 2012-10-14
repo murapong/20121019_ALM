@@ -47,13 +47,13 @@
                                                           composeViewControllerForServiceType:serviceType];
         
         // テキストの初期値
-        [composeViewController setInitialText:@"hogehoge"];
+        [composeViewController setInitialText:kShareText];
         
         // 画像を添付
-        [composeViewController addImage:[UIImage imageNamed:@"murapong.jpg"]];
+        [composeViewController addImage:[UIImage imageNamed:kShareImage]];
         
         // URLを追加
-        [composeViewController addURL:[NSURL URLWithString:@"http://example.com"]];
+        [composeViewController addURL:[NSURL URLWithString:kShareUrl]];
         
         // 完了時の処理
         [composeViewController setCompletionHandler:^(SLComposeViewControllerResult result) {
