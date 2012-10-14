@@ -11,6 +11,7 @@
 @interface ViewController : UIViewController
 
 - (IBAction)SLComposeViewControllerButtonPressed:(id)sender;
+- (IBAction)SLRequestButtonPressed:(id)sender;
 - (IBAction)UIActivityViewControllerButtonPressed:(id)sender;
 
 @end

@@ -10,6 +10,7 @@
 
 // ヘッダファイルをインポート
 #import <Social/Social.h>
+#import <Accounts/Accounts.h>
 
 // 投稿する内容
 #define kShareText  @"hogehoge"
@@ -67,6 +68,42 @@
         // SLComposeViewControllerを表示
         [self presentViewController:composeViewController animated:YES completion:nil];
     }
+}
+
+- (IBAction)SLRequestButtonPressed:(id)sender
+{
+    NSString *accountTypeIdentifier = ACAccountTypeIdentifierTwitter;   // Twitter
+    
+    ACAccountStore *accountStore = [[ACAccountStore alloc] init];
+    ACAccountType *accountType = [accountStore accountTypeWithAccountTypeIdentifier:accountTypeIdentifier];
+    [accountStore requestAccessToAccountsWithType:accountType options:nil completion:^(BOOL granted, NSError *error) {
+        // アカウントが設定されているかチェック
+        if (granted) {
+            NSArray *accounts = [accountStore accountsWithAccountType:accountType];
+            if ([accounts count] > 0) {
+                // Twitterアカウントは複数設定できるがとりあえず最初のを使用する
+                ACAccount *account = [accounts objectAtIndex:0];
+                
+                // TwitterのWeb API
+                NSURL *url = [NSURL URLWithString:@"https://api.twitter.com/1/statuses/update.json"];
+                
+                // パラメータを設定
+                NSDictionary *params = @{@"status" : kShareText};
+                
+                // リクエストを組み立てる
+                SLRequest *request = [SLRequest requestForServiceType:SLServiceTypeTwitter requestMethod:SLRequestMethodPOST URL:url parameters:params];
+                
+                // アカウントの設定
+                request.account = account;
+                
+                // リクエスト送信
+                [request performRequestWithHandler:
+                 ^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
+                     NSLog(@"%@", [NSString stringWithFormat:@"status code : %d", urlResponse.statusCode]);
+                }];
+            }
+        }
+    }];
 }
 
 - (IBAction)UIActivityViewControllerButtonPressed:(id)sender

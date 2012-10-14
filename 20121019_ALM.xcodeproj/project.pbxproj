@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		555900C7162A89180030A5BA /* murapong.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 555900C6162A89180030A5BA /* murapong.jpg */; };
 		555900CA162AA4AE0030A5BA /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 555900C9162AA4AE0030A5BA /* Social.framework */; };
+		555900CC162AECB00030A5BA /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 555900CB162AECB00030A5BA /* Accounts.framework */; };
 		55A5B469162A841900E3B946 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55A5B468162A841900E3B946 /* UIKit.framework */; };
 		55A5B46B162A841900E3B946 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55A5B46A162A841900E3B946 /* Foundation.framework */; };
 		55A5B46D162A841900E3B946 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55A5B46C162A841900E3B946 /* CoreGraphics.framework */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		555900C6162A89180030A5BA /* murapong.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = murapong.jpg; sourceTree = "<group>"; };
 		555900C9162AA4AE0030A5BA /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		555900CB162AECB00030A5BA /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		55A5B464162A841900E3B946 /* 20121019_ALM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 20121019_ALM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55A5B468162A841900E3B946 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		55A5B46A162A841900E3B946 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -48,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				555900CC162AECB00030A5BA /* Accounts.framework in Frameworks */,
 				555900CA162AA4AE0030A5BA /* Social.framework in Frameworks */,
 				55A5B469162A841900E3B946 /* UIKit.framework in Frameworks */,
 				55A5B46B162A841900E3B946 /* Foundation.framework in Frameworks */,
@@ -82,6 +85,7 @@
 				55A5B46A162A841900E3B946 /* Foundation.framework */,
 				55A5B46C162A841900E3B946 /* CoreGraphics.framework */,
 				555900C9162AA4AE0030A5BA /* Social.framework */,
+				555900CB162AECB00030A5BA /* Accounts.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
