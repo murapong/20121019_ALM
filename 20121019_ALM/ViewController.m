@@ -11,6 +11,11 @@
 // ヘッダファイルをインポート
 #import <Social/Social.h>
 
+// 投稿する内容
+#define kShareText  @"hogehoge"
+#define kShareUrl   @"http://example.com"
+#define kShareImage @"murapong.jpg"
+
 @interface ViewController ()
 
 @end
@@ -62,6 +67,32 @@
         // SLComposeViewControllerを表示
         [self presentViewController:composeViewController animated:YES completion:nil];
     }
+}
+
+- (IBAction)UIActivityViewControllerButtonPressed:(id)sender
+{
+    // 投稿する内容
+    NSString *text = kShareText;
+    UIImage *image = [UIImage imageNamed:kShareImage];
+    NSURL *url = [NSURL URLWithString:kShareUrl];
+    NSArray *activityItems = @[text, image, url];
+    
+    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
+    
+    // 除外するアクティビティタイプを指定
+    NSArray *excludedActivityTypes = @[
+//                                        UIActivityTypePostToWeibo,
+//                                        UIActivityTypeMessage,
+//                                        UIActivityTypeMail,
+//                                        UIActivityTypePrint,
+//                                        UIActivityTypeCopyToPasteboard,
+//                                        UIActivityTypeAssignToContact,
+//                                        UIActivityTypeSaveToCameraRoll,
+                                    ];
+    activityViewController.excludedActivityTypes = excludedActivityTypes;
+    
+    // UIActivityViewControllerを表示
+    [self presentViewController:activityViewController animated:YES completion:nil];
 }
 
 @end
