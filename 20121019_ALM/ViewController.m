@@ -56,15 +56,6 @@
         // URLを追加
         [composeViewController addURL:[NSURL URLWithString:kShareUrl]];
         
-        // 完了時の処理
-        [composeViewController setCompletionHandler:^(SLComposeViewControllerResult result) {
-            if (result == SLComposeViewControllerResultDone) {
-                NSLog(@"Done");
-            } else if (result == SLComposeViewControllerResultCancelled) {
-                NSLog(@"Cancelled");
-            }
-        }];
-        
         // SLComposeViewControllerを表示
         [self presentViewController:composeViewController animated:YES completion:nil];
     }
