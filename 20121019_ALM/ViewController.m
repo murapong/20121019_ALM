@@ -65,6 +65,7 @@
 {
     NSString *accountTypeIdentifier = ACAccountTypeIdentifierTwitter;   // Twitter
     
+    // ソーシャルメディアのアカウント情報を管理するクラス
     ACAccountStore *accountStore = [[ACAccountStore alloc] init];
     ACAccountType *accountType = [accountStore accountTypeWithAccountTypeIdentifier:accountTypeIdentifier];
     [accountStore requestAccessToAccountsWithType:accountType options:nil completion:^(BOOL granted, NSError *error) {
