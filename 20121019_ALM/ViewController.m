@@ -74,7 +74,7 @@
             NSArray *accounts = [accountStore accountsWithAccountType:accountType];
             if ([accounts count] > 0) {
                 // Twitterアカウントは複数設定できるがとりあえず最初のを使用する
-                ACAccount *account = [accounts objectAtIndex:0];
+                ACAccount *account = accounts[0];
                 
                 // TwitterのWeb API
                 NSURL *url = [NSURL URLWithString:@"https://api.twitter.com/1/statuses/update.json"];
