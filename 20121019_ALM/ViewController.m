@@ -15,7 +15,7 @@
 // 投稿する内容
 #define kShareText  @"hogehoge"
 #define kShareUrl   @"http://example.com"
-#define kShareImage @"murapong.jpg"
+#define kShareImage @"sample.jpg"
 
 @interface ViewController ()
 

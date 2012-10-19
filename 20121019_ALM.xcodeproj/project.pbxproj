@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		555900C7162A89180030A5BA /* murapong.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 555900C6162A89180030A5BA /* murapong.jpg */; };
+		555900C7162A89180030A5BA /* sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 555900C6162A89180030A5BA /* sample.jpg */; };
 		555900CA162AA4AE0030A5BA /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 555900C9162AA4AE0030A5BA /* Social.framework */; };
 		555900CC162AECB00030A5BA /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 555900CB162AECB00030A5BA /* Accounts.framework */; };
 		55A5B469162A841900E3B946 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55A5B468162A841900E3B946 /* UIKit.framework */; };
@@ -24,7 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		555900C6162A89180030A5BA /* murapong.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = murapong.jpg; sourceTree = "<group>"; };
+		555900C6162A89180030A5BA /* sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample.jpg; sourceTree = "<group>"; };
 		555900C9162AA4AE0030A5BA /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		555900CB162AECB00030A5BA /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		55A5B464162A841900E3B946 /* 20121019_ALM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 20121019_ALM.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,7 +106,7 @@
 		55A5B46F162A841900E3B946 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				555900C6162A89180030A5BA /* murapong.jpg */,
+				555900C6162A89180030A5BA /* sample.jpg */,
 				55A5B470162A841900E3B946 /* 20121019_ALM-Info.plist */,
 				55A5B471162A841900E3B946 /* InfoPlist.strings */,
 				55A5B474162A841900E3B946 /* main.m */,
@@ -174,7 +174,7 @@
 				55A5B47D162A841900E3B946 /* Default@2x.png in Resources */,
 				55A5B47F162A841900E3B946 /* Default-568h@2x.png in Resources */,
 				55A5B485162A841900E3B946 /* ViewController.xib in Resources */,
-				555900C7162A89180030A5BA /* murapong.jpg in Resources */,
+				555900C7162A89180030A5BA /* sample.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
